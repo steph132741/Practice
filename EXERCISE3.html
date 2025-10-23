@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .navbar {
+            display: flex;
+            background-color: #2c3e50;
+            border-radius: 4px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+        
+        .nav-item a:hover {
+            background-color: #34495e;
+        }
+        
+        .dropdown {
+            position: absolute;
+            background-color:#34495e;
+            display: none;
+            min-width: 150px;
+            z-index: 100;
+        }
+        
+        .dropdown a {
+            color:white;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown a:hover {
+            background-color: #2e5ad3;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .arrow {
+            font-size: 0.8em;
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .dropdown {
+                position: static;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item">
+            <a>Home</a>
+        </div>
+        <div class="nav-item">
+            <a>About</a>
+        </div>
+        <div class="nav-item">
+            <a>Services <span class="arrow">▼</span></a>
+            <div class="dropdown">
+                <a>Web Design</a>
+                <a>SEO</a>
+                <a>Marketing</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a>Contact</a>
+        </div>
+    </div>
+</body>
+</html>
