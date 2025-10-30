@@ -15,9 +15,15 @@
   --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(HankenGrotesk-VariableFont_wght\ \(1\).ttf);
+}
+
+
 body {
   background: var(--pale-blue);
-  font-family: "Outfit", sans-serif;
+  font-family: "myFirstFont";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +35,8 @@ body {
 .container {
   display: flex;
   background: var(--white);
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   overflow: hidden;
   max-width: 700px;
   width: 90%;
@@ -59,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .circle h1 {
@@ -80,7 +87,7 @@ body {
 .result-box .description {
   font-size: 14px;
   color: var(--light-lavender);
-  line-height: 1.4;
+  line-height: 2.0;
 }
 
 .summary-box {
@@ -98,15 +105,28 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  padding: 12px 15px;
+  padding: 5px 5px;
   border-radius: 10px;
   margin-bottom: 12px;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .reaction { background: hsl(0, 100%, 97%); color: var(--light-red); }
 .memory { background: hsl(39, 100%, 96%); color: var(--orangey-yellow); }
 .verbal { background: hsl(166, 100%, 96%); color: var(--green-teal); }
 .visual { background: hsl(234, 85%, 96%); color: var(--cobalt-blue); }
+.score {color:var(--dark-gray-blue);}
+.score span { font-weight: 900; }
 
 button {
   width: 100%;
