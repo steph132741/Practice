@@ -1,44 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental Services</title>
-</head>
-<body>
-    <div class="container">
-        <div class="card sedan">
-            <div>
-                <div class="icon">
-                    <!-- Icon would go here -->
-                </div>
-                <h2>Sedans</h2>
-                <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
-            </div>
-            <a href="#" class="btn">Learn More</a>
-        </div>
-        
-        <div class="card suv">
-            <div>
-                <div class="icon">
-                    <!-- Icon would go here -->
-                </div>
-                <h2>Suvs</h2>
-                <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
-            </div>
-            <a href="#" class="btn">Learn More</a>
-        </div>
-        
-        <div class="card luxury">
-            <div>
-                <div class="icon">
-                    <!-- Icon would go here -->
-                </div>
-                <h2>Luxury</h2>
-                <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
-            </div>
-            <a href="#" class="btn">Learn More</a>
-        </div>
-    </div>
-</body>
-</html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial=scale=1.0">
+        <title>Ableton</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                color: #000;
+                line-height: 1.6;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            header {
+                padding: 20px 40px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+                color: #0000ff;
+            }
+
+            .main-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+            }
+
+            .nav-links a:hover {
+                color: #0000ff;
+            }
+
+            .nav-right {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .try-free {
+                background-color: #0000ff;
+                color: white;
+                padding:8px 15px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .hero {
+                padding: 80px 40px;
+                background-color: #fbffa7;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 20px;
+                max-width: 800px;
+                margin: 0 auto 30px;
+            }
+
+            .section {
+                padding: 80px 40px;
+            }
+
+            .section-frid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+            
+            section {
+                padding: 80px 40px;
+            }
+
+            .section-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .section-text {
+                max-width: 500px;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .section p {
+                margin-bottom: 20px;
+            }
+
+            .section-image {
+                height: 400px;
+                background-color: #b1c5ff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+            }
+
+            .section-image.orange {
+            background-color: #ff764d;
+        }
+
+        .section-image.green {
+            background-color: #b6ffc0;
+        }
+
+        .section-image.purple {
+            background-color: #d5b3ff;
+        }
+
+        /* Team Section */
+        .team-section {
+            background-color: #b1c5ff;
+            padding: 80px 40px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .team-member {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 60px 40px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0000ff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a:hover {
+            color: #0000ff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: #0000ff;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: #ff764d;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .newsletter-form button {
+            background-color: #0000ff;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .nav-links {
+                display: none;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
+    </head>
+</html> 
